@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Avicenne</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Avicenne</span>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="biographie.html" class="nav-link">Biographie</a></li>
+                        <li><a href="oeuvres.html" class="nav-link">Œuvres</a></li>
+                        <li><a href="philosophie.html" class="nav-link">Philosophie</a></li>
+                        <li><a href="heritage.html" class="nav-link">Héritage</a></li>
+                        <li><a href="galerie.html" class="nav-link">Galerie</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Contact -->
+    <section class="hero hero-page" style="background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(2, 12, 27, 0.9)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Contact</h1>
+                <p class="hero-subtitle">Prenez contact avec nous pour en savoir plus sur Avicenne</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informations de Contact -->
+    <section class="section-contact-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Informations de Contact</h2>
+                <p>N'hésitez pas à nous contacter pour toute question sur Avicenne</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>tayembenltifa@gmail.com</p>
+                    <a href="mailto:tayembenltifa@gmail.com" class="btn-contact">Envoyer un email</a>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p>+216 50 618 315</p>
+                    <a href="tel:+21650618315" class="btn-contact">Appeler</a>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Localisation</h3>
+                    <p>Tunis, Tunisie</p>
+                    <button class="btn-contact" onclick="openMap()">Voir sur la carte</button>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Disponibilité</h3>
+                    <p>Lun - Ven: 9h - 18h</p>
+                    <p>Sam: 9h - 13h</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de Contact -->
+    <section class="section-contact-form">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="form-intro fade-in">
+                    <h2>Envoyez-nous un message</h2>
+                    <p>Vous avez des questions sur Avicenne, ses œuvres ou son héritage ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                    
+                    <div class="form-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Réponse sous 24h</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Expertise académique</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Confidentialité assurée</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Sujet *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="biographie">Biographie d'Avicenne</option>
+                            <option value="oeuvres">Œuvres et écrits</option>
+                            <option value="philosophie">Philosophie avicennienne</option>
+                            <option value="heritage">Héritage et influence</option>
+                            <option value="recherche">Recherche académique</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre demande en détail..."></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Je souhaite recevoir les actualités sur Avicenne</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Envoyer le message</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Envoi en cours...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Questions Fréquentes</h2>
+                <p>Réponses aux questions les plus courantes sur Avicenne</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Quelle est l'œuvre la plus importante d'Avicenne ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le "Canon de la Médecine" est considéré comme son œuvre la plus importante. Cette encyclopédie médicale en cinq volumes a servi de référence dans les universités européennes pendant plus de 600 ans.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Quelle était la contribution majeure d'Avicenne à la philosophie ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sa distinction entre essence et existence, ainsi que sa théorie de l'intellect actif, ont profondément influencé la philosophie médiévale tant dans le monde islamique qu'en Europe.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Où puis-je trouver les œuvres complètes d'Avicenne ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>De nombreuses bibliothèques universitaires possèdent des éditions de ses œuvres. Des versions numérisées sont également disponibles en ligne sur des plateformes académiques.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Avicenne a-t-il influencé la médecine moderne ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, de nombreux concepts avicenniens, comme l'importance de l'hygiène et la nature contagieuse des maladies, ont anticipé des découvertes modernes et ont influencé le développement de la médecine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte -->
+    <section class="section-map">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre Localisation</h2>
+                <p>Tunis, Tunisie - Au cœur du monde arabe</p>
+            </div>
+            
+            <div class="map-container fade-in">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Tunis, Tunisie</h3>
+                    <p>Centre de recherche sur Avicenne</p>
+                    <p>Région historique d'influence avicennienne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À propos d'Avicenne</h3>
+                    <p>Ce site est dédié à la vie, aux œuvres et à l'héritage d'Avicenne, l'un des plus grands penseurs de l'histoire humaine.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="biographie.html">Biographie</a></li>
+                        <li><a href="oeuvres.html">Œuvres</a></li>
+                        <li><a href="philosophie.html">Philosophie</a></li>
+                        <li><a href="heritage.html">Héritage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>tayembenltifa@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+216 50 618 315</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tunis, Tunisie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Site dédié à Avicenne. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Gestion du formulaire de contact
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            // FAQ Accordéon
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Validation du formulaire
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('.btn-submit');
+                    const btnText = submitBtn.querySelector('.btn-text');
+                    const btnLoading = submitBtn.querySelector('.btn-loading');
+                    
+                    // Simulation d'envoi
+                    btnText.style.display = 'none';
+                    btnLoading.style.display = 'inline-block';
+                    
+                    setTimeout(() => {
+                        btnText.style.display = 'inline-block';
+                        btnLoading.style.display = 'none';
+                        alert('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+                        contactForm.reset();
+                    }, 2000);
+                });
+            }
+        });
+        
+        function openMap() {
+            alert('Ouverture de la carte vers Tunis, Tunisie');
+            // Ici, vous pourriez intégrer Google Maps ou autre service de cartographie
+        }
+    </script>
+</body>
+</html>

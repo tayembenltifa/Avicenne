@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Avicenne</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Avicenne</span>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="biographie.html" class="nav-link">Biographie</a></li>
+                        <li><a href="oeuvres.html" class="nav-link">Œuvres</a></li>
+                        <li><a href="philosophie.html" class="nav-link">Philosophie</a></li>
+                        <li><a href="heritage.html" class="nav-link">Héritage</a></li>
+                        <li><a href="galerie.html" class="nav-link active">Galerie</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Galerie -->
+    <section class="hero hero-page" style="background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(2, 12, 27, 0.9)), url('https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Galerie</h1>
+                <p class="hero-subtitle">Images et représentations d'Avicenne à travers l'histoire</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres Galerie -->
+    <section class="section-gallery-filters">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">Tout voir</button>
+                <button class="gallery-filter" data-filter="portraits">Portraits</button>
+                <button class="gallery-filter" data-filter="manuscrits">Manuscrits</button>
+                <button class="gallery-filter" data-filter="monuments">Monuments</button>
+                <button class="gallery-filter" data-filter="influence">Influence</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Principale -->
+    <section class="section-gallery-main">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Portraits -->
+                <div class="gallery-item fade-in" data-category="portraits">
+                    <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Portrait classique d'Avicenne">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Portrait Classique</h3>
+                            <p>Représentation traditionnelle d'Avicenne</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="portraits">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Avicenne en médecin">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Le Médecin</h3>
+                            <p>Avicenne représenté en praticien</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manuscrits -->
+                <div class="gallery-item fade-in" data-category="manuscrits">
+                    <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Page du Canon de la Médecine">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Canon de la Médecine</h3>
+                            <p>Page d'un manuscrit ancien</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="manuscrits">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Calligraphie arabe">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Calligraphie</h3>
+                            <p>Art de l'écriture à l'époque d'Avicenne</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monuments -->
+                <div class="gallery-item fade-in" data-category="monuments">
+                    <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Mausolée d'Avicenne">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Mausolée à Hamadan</h3>
+                            <p>Lieu de sépulture d'Avicenne en Iran</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="monuments">
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Statue d'Avicenne">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Statue Commémorative</h3>
+                            <p>Hommage moderne au grand savant</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Influence -->
+                <div class="gallery-item fade-in" data-category="influence">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Université médiévale">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Enseignement Médiéval</h3>
+                            <p>Diffusion du Canon dans les universités</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in" data-category="influence">
+                    <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Instruments médicaux anciens">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Médecine Traditionnelle</h3>
+                            <p>Instruments utilisés à l'époque d'Avicenne</p>
+                            <button class="btn-view">Voir <i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie des Œuvres -->
+    <section class="section-works-gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Œuvres Illustrées</h2>
+                <p>Manuscrits et éditions anciennes des œuvres d'Avicenne</p>
+            </div>
+            
+            <div class="works-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Canon de la Médecine">
+                            <div class="slide-caption">
+                                <h3>Canon de la Médecine</h3>
+                                <p>Édition latine du XVe siècle</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Livre de la Guérison">
+                            <div class="slide-caption">
+                                <h3>Livre de la Guérison</h3>
+                                <p>Manuscrit persan du XIIIe siècle</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Poème de la Médecine">
+                            <div class="slide-caption">
+                                <h3>Poème de la Médecine</h3>
+                                <p>Version calligraphiée arabe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour la galerie -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <img src="" alt="" class="modal-image">
+                <div class="modal-info">
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-description"></p>
+                </div>
+            </div>
+            <div class="modal-nav">
+                <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À propos d'Avicenne</h3>
+                    <p>Ce site est dédié à la vie, aux œuvres et à l'héritage d'Avicenne, l'un des plus grands penseurs de l'histoire humaine.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="biographie.html">Biographie</a></li>
+                        <li><a href="oeuvres.html">Œuvres</a></li>
+                        <li><a href="philosophie.html">Philosophie</a></li>
+                        <li><a href="heritage.html">Héritage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>tayembenltifa@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+216 50 618 315</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tunis, Tunisie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Site dédié à Avicenne. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

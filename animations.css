@@ -1,0 +1,226 @@
+/* Animations d'apparition */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation pour les cartes */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation de pulse pour les icônes */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animation de glissement */
+.slide-in-left {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.slide-in-left.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-in-right {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.slide-in-right.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Animation de zoom */
+.zoom-in {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.zoom-in.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Animation de rotation */
+.rotate-in {
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.rotate-in.visible {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+}
+
+/* Animation de typewriter */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid var(--accent);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent) }
+}
+
+/* Animation de float */
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Animation de gradient */
+.gradient-text {
+    background: linear-gradient(45deg, var(--accent), var(--light), var(--accent));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animation de shake */
+.shake:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Animation de bounce */
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* Animation de flip */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Animation de progress bar */
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(100, 255, 218, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent);
+    animation: progress 2s ease-in-out;
+}
+
+@keyframes progress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Animation de curtain */
+.curtain-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.curtain-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    transform: translateX(-100%);
+    animation: curtain 1.5s ease-in-out forwards;
+    z-index: 1;
+}
+
+@keyframes curtain {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
